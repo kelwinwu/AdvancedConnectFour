@@ -13,21 +13,10 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/twoplayerbutton"
-        android:src="@drawable/twoplayer"
+        android:id="@+id/playButton"
+        android:src="@drawable/play"
         android:background="@null"
-        android:layout_marginBottom="15dp"
-        android:layout_above="@+id/threeplayerbutton"
-        android:layout_alignLeft="@+id/threeplayerbutton"
-        android:layout_alignStart="@+id/threeplayerbutton" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/threeplayerbutton"
-        android:src="@drawable/threeplayer"
-        android:background="@null"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:layout_above="@+id/optionsbutton"
         android:layout_centerHorizontal="true" />
 
@@ -37,7 +26,7 @@
         android:id="@+id/optionsbutton"
         android:src="@drawable/options"
         android:background="@null"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:layout_above="@+id/quitbutton"
         android:layout_alignLeft="@+id/quitbutton"
         android:layout_alignStart="@+id/quitbutton" />
@@ -48,7 +37,7 @@
         android:id="@+id/quitbutton"
         android:src="@drawable/quit"
         android:background="@null"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
