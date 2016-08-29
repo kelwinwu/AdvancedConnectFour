@@ -7,25 +7,253 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/backgroundpicture">
     tools:context=".PlaySetupActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Two Player"
-        android:id="@+id/twoPlayerTitle"
+        android:text="Game Setup"
+        android:textSize="35dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/gameSetupText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp" />
+        android:layout_marginTop="31dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="test"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/twoPlayerTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp" />
+        android:text="Rows:"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/rowsText"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/playersText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Columns:"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/columnsText"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/rowsText"
+        android:layout_alignLeft="@+id/rowsText"
+        android:layout_alignStart="@+id/rowsText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Players:"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/playersText"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/gameSetupText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Win Condition:"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/winConditionText"
+        android:layout_below="@+id/columnsText"
+        android:layout_alignLeft="@+id/columnsText"
+        android:layout_alignStart="@+id/columnsText"
+        android:layout_marginTop="31dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="2"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/playerNumber"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_alignTop="@+id/playersText"
+        android:layout_alignRight="@+id/randomSwitch"
+        android:layout_alignEnd="@+id/randomSwitch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="6"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/rowNumber"
+        android:layout_alignTop="@+id/rowsText"
+        android:layout_toStartOf="@+id/playerNumber"
+        android:layout_alignEnd="@+id/playerNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="7"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/columnNumber"
+        android:layout_toEndOf="@+id/columnsText"
+        android:layout_alignTop="@+id/columnsText"
+        android:layout_alignLeft="@+id/rowNumber"
+        android:layout_alignStart="@+id/rowNumber" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="4"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/winConditionNumber"
+        android:layout_above="@+id/randomSwitch"
+        android:layout_alignLeft="@+id/columnNumber"
+        android:layout_alignStart="@+id/columnNumber" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Board:     "
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/randomSwitch"
+        android:layout_marginTop="33dp"
+        android:checked="false"
+        android:layout_below="@+id/winConditionText"
+        android:layout_alignLeft="@+id/winConditionText"
+        android:layout_alignStart="@+id/winConditionText" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Variable Pieces:    "
+        android:id="@+id/variableSwitch"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/randomSwitch"
+        android:layout_alignLeft="@+id/randomSwitch"
+        android:layout_alignStart="@+id/randomSwitch"
+        android:layout_marginTop="33dp"
+        android:checked="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Disabled"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/randomDisabledText"
+        android:layout_alignTop="@+id/randomSwitch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Disabled"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/variableDisabledText"
+        android:layout_alignBottom="@+id/variableSwitch"
+        android:layout_alignLeft="@+id/randomDisabledText"
+        android:layout_alignStart="@+id/randomDisabledText" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playersDown"
+        android:src="@drawable/downarrow"
+        android:background="@null"
+        android:layout_alignTop="@+id/playersUp"
+        android:layout_toRightOf="@+id/gameSetupText"
+        android:layout_toEndOf="@+id/gameSetupText" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playersUp"
+        android:background="@null"
+        android:src="@drawable/uparrow"
+        android:layout_above="@+id/rowsText"
+        android:layout_alignRight="@+id/randomDisabledText"
+        android:layout_alignEnd="@+id/randomDisabledText" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowsDown"
+        android:background="@null"
+        android:src="@drawable/downarrow"
+        android:layout_above="@+id/columnsText"
+        android:layout_alignLeft="@+id/playersDown"
+        android:layout_alignStart="@+id/playersDown" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowsUp"
+        android:background="@null"
+        android:src="@drawable/uparrow"
+        android:layout_alignTop="@+id/rowsDown"
+        android:layout_alignLeft="@+id/playersUp"
+        android:layout_alignStart="@+id/playersUp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/columnsDown"
+        android:background="@null"
+        android:src="@drawable/downarrow"
+        android:layout_above="@+id/winConditionText"
+        android:layout_alignLeft="@+id/rowsDown"
+        android:layout_alignStart="@+id/rowsDown" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/columnsUp"
+        android:background="@null"
+        android:layout_alignTop="@+id/columnsDown"
+        android:layout_alignLeft="@+id/rowsUp"
+        android:layout_alignStart="@+id/rowsUp"
+        android:src="@drawable/uparrow" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/winConditionDown"
+        android:background="@null"
+        android:src="@drawable/downarrow"
+
+        android:layout_alignBottom="@+id/winConditionNumber"
+        android:layout_alignLeft="@+id/columnsDown"
+        android:layout_alignStart="@+id/columnsDown" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/winConditionUp"
+        android:background="@null"
+        android:src="@drawable/uparrow"
+        android:layout_above="@+id/randomSwitch"
+        android:layout_alignLeft="@+id/columnsUp"
+        android:layout_alignStart="@+id/columnsUp" />
+
 </RelativeLayout>
